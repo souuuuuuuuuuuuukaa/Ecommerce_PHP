@@ -29,8 +29,9 @@ class CartController extends Controller {
                 "image" => $product->image
             ];
         }
-
+   //On ajoute des produits dans le panier → ils sont stockés dans la session 
         session()->put('cart', $cart);
+    //Message de succès
         return redirect()->back()->with('success', 'Produit ajouté au panier !');
     }
 

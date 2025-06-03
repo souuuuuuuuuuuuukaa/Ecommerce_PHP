@@ -38,7 +38,9 @@ class ProductController extends Controller
 
     public function index()
     {
+        //Récupère tous les produits depuis la base de données avec Product::all().
         $products = Product::all();
+        //Passe ces produits à la vue products.index (ex: pour les afficher sous forme de cartes).
         return view('products.index', compact('products'));
     }
     public function show($id)
